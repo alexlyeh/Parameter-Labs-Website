@@ -24,4 +24,5 @@ $(document).ready(function() {
     })(jQuery);
 
 $('#apps').parallax({ "coeff": 0.8 });
+$('#people').parallax({ "coeff": 0.8 });
 });

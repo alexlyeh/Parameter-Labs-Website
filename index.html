@@ -114,6 +114,42 @@
 			padding: 0;
 			text-shadow: 0px 1px black;
 		}
+
+		#people {
+			padding: 20px 0px;
+			overflow: auto;
+			background-image: url("img/pattern2.png");
+		}
+
+		#people-container {
+			clear: both;
+			margin: 0 auto;
+		}
+
+		.profile {
+			width: 220px;
+			border-radius: 110px;
+			border-width: 2px;
+			border-color: white;
+			border-style: solid;
+			margin-top: 10px;
+		}
+
+		.people-grid {
+			width: 380px;
+			display: block;
+			float: left;
+			padding: 20px;
+			margin: 10px;
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+
+		.name, .title{
+			font-family: Gaspar;
+			font-size: 40px;
+		}
+
 	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -125,11 +161,17 @@
   		});
 
 	    function setContainerWidth() {
+	    	var windowWidth = $(document).width();
+
 	        $('#apps-container').css('width', 'auto');
-		    var windowWidth = $(document).width();
 		    var blockWidth = $('.grid').outerWidth(true);
 	        var maxBoxPerRow = Math.floor(windowWidth / blockWidth);
 	        $('#apps-container').width(maxBoxPerRow * blockWidth);
+
+	        $('#people-container').css('width', 'auto');
+		    var blockWidth = $('.people-grid').outerWidth(true);
+	        var maxBoxPerRow = Math.floor(windowWidth / blockWidth);
+	        $('#people-container').width(maxBoxPerRow * blockWidth);
 	    }
 	</script>
 </head>
@@ -144,14 +186,14 @@
 	<section id = "main">
 		<div id="main-center">
 			<div id = "main-content-container">
-				<p id = "name">PARAMETER LABS</p>
+				<p id = "name">[PARAMETER LABS]</p>
 				<p id = "slogan">we build apps.</p>
 			</div>
 		</div>
 	</section>
 
 	<section id = "apps">
-		<div id = "apps-container" style = "background-color: white;">
+		<div id = "apps-container">
 			<div class = "grid"><a href = "http://getfeather.com/"><img class = "portfolio-icons" src = "img/Feather1024.png"/></a></div>
 			<div class = "grid"><a href = "https://itunes.apple.com/us/app/hshacks/id827168843?mt=8"><img class = "portfolio-icons" src = "img/Icon-76@2x.png"/></a></div>
 			<div class = "grid"><a href = "https://itunes.apple.com/us/app/evdder/id590607951?ls=1&mt=8"><img class = "portfolio-icons" src = "img/itunesart.png"/></a></div>
@@ -168,7 +210,44 @@
 	</section>
 
 	<section id = "people">
-		
+		<div id = "people-container">
+
+			<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/spencer.jpg"/></a>
+				<p class = "name">Spencer Yen</p>
+				<p class = "title">iOS Developer</p>
+			</div>
+
+			<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/aakash2.jpg"/></a>
+				<p class = "name">Aakash Thumaty</p>
+				<p class = "title">iOS Developer</p>
+			</div>
+
+			<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/alex.png"/></a>
+				<p class = "name">Alex Yeh</p>
+				<p class = "title">iOS Developer</p>
+			</div>
+
+			<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/andy.png"/></a>
+				<p class = "name">Andy Hwang</p>
+				<p class = "title">Head of Design</p>
+			</div>
+
+<!-- 		<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/person.jpg"/></a>
+				<p class = "name">??????</p>
+				<p class = "title">Join Us!</p>
+			</div>
+
+			<div class = "people-grid">
+				<a href = ""><img class = "profile" src = "img/person.jpg"/></a>
+				<p class = "name">??????</p>
+				<p class = "title">Join Us!</p>
+			</div> -->
+
 	</section>
 </body>
 </html>
